@@ -1,0 +1,14 @@
+{
+  "name": "project-buii-2",
+  "version": "1.0.0",
+  "description": "buiiii bday wishing website",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Arkadyuti",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

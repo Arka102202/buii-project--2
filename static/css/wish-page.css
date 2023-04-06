@@ -1,0 +1,272 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: url(../img/wish_page/lights-background.webp);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container {
+  width: 40%;
+  height: 70%;
+  position: relative;
+  transition: 1s all;
+}
+
+.layer_1 {
+  width: 100%;
+  height: 100.05%;
+  transform-style: preserve-3d;
+}
+
+.layer_1--rotate,
+.layer_1--front,
+.layer_1--back,
+.layer_2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 2s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.layer_2 {
+  z-index: -1;
+}
+
+.container:hover .layer_1--rotate {
+  transform: perspective(100rem) rotateY(-180deg);
+  transform-origin: left;
+}
+.container:hover .layer_2 {
+  transform: translateX(50%);
+  z-index: 0;
+}
+
+.container:hover .layer_2_img--3 {
+  opacity: 1;
+}
+
+.container:hover .back_img_bf_1 {
+  opacity: 1;
+}
+.container:hover .back_img_bf_2 {
+  opacity: 1;
+}
+.container:hover .back_img_bf_3 {
+  opacity: 1;
+}
+.container:hover .back_img_bf_4 {
+  opacity: 1;
+}
+
+.layer_1--front {
+  background: url(../img/wish_page/ethnic-card.webp);
+  background-size: cover;
+
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 1.5rem 4rem 0.5rem rgba(0, 0, 0, 0.5);
+
+  display: grid;
+  justify-items: start;
+  align-items: center;
+
+  padding: 3rem;
+  font-size: 2.5rem;
+  color: rgb(255, 212, 126);
+}
+
+.front_text--1 {
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.2;
+}
+
+.front_text--2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.front_text--3 {
+  font-size: 3rem;
+  font-family: "Sacramento";
+  display: flex;
+}
+
+.front_text--3-img {
+  width: 3rem;
+  transform: translateY(-30%);
+}
+
+.layer_1--back {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  transform: rotateY(180deg) translateX(50%);
+
+  background: url(../img/wish_page/3d-floral-bg.webp);
+  background-size: contain;
+}
+
+.back_img {
+  height: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 2s;
+}
+
+.back_img_bf_1 {
+  position: absolute;
+  top: 35%;
+  left: 22%;
+  width: 12%;
+  opacity: 0;
+  transition: all 5s;
+}
+.back_img_bf_2 {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  width: 10%;
+  opacity: 0;
+  transition: all 5s;
+}
+.back_img_bf_3 {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 5%;
+  opacity: 0;
+  transition: all 5s;
+}
+.back_img_bf_4 {
+  position: absolute;
+  top: 75%;
+  left: 45%;
+  width: 15%;
+  opacity: 0;
+  transition: all 5s;
+}
+
+.layer_2 {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  background: url(../img/wish_page/3d-floral-bg.webp);
+  background-size: contain;
+}
+
+.layer_2_img--1 {
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.layer_2_img--2 {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  width: 50%;
+  opacity: 1;
+}
+
+.layer_2_img--3 {
+  position: absolute;
+  top: 55%;
+  left: 72%;
+  width: 12%;
+  opacity: 0;
+  transition: all 5s;
+}
+
+.layer_2--text_container {
+  width: 63%;
+  height: 70%;
+  position: absolute;
+  top: 47%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  background: linear-gradient(
+    45deg,
+    rgba(131, 58, 180, 0.15) 0%,
+    rgba(252, 176, 69, 0.3) 50%,
+    rgba(253, 29, 29, 0.1) 100%
+  );
+  border-radius: 1rem;
+
+  display: grid;
+  justify-items: center;
+
+  padding: 1rem;
+
+  color: #0f2138;
+}
+
+.layer_2-text--1 {
+  font-size: 1.5rem;
+  font-family: "lora";
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+.layer_2-text--2 {
+  font-size: 6.5rem;
+  font-family: "Sassy Frass";
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.layer_2-text--3 {
+  font-size: 2.3rem;
+  font-family: "EB Garamond";
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.layer_2-text--4 {
+  font-size: 1.7rem;
+  font-family: "EB Garamond";
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+.layer_2-text--5 {
+  font-size: 4rem;
+  font-family: "Comforter";
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #131142;
+  text-decoration: none;
+}
+.layer_2-text--6 {
+  font-size: 3rem;
+  font-family: "Sacramento";
+  font-weight: 600;
+  text-transform: capitalize;
+}
